@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import About from "./components/About";
+
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
@@ -16,6 +18,7 @@ function App() {
       <Navbar darkMode={darkMode} toggleDarkMode={() => setDarkMode(!darkMode)} />
 
       <Hero darkMode={darkMode} />
+      <About darkMode={darkMode} />
 
     </div>
   );
