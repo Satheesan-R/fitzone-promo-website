@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
@@ -14,15 +15,11 @@ function App() {
 
       <Navbar darkMode={darkMode} toggleDarkMode={() => setDarkMode(!darkMode)} />
 
-      {/* test */}
-      <div style={{ paddingTop: "100px", textAlign: "center" }}>
-        <h1 style={{ color: "#C9950C", fontFamily: "'Barlow Condensed', sans-serif", fontSize: "48px" }}>
-          Fitness Sports Center 💪
-        </h1>
-      </div>
+      <Hero darkMode={darkMode} />
 
     </div>
   );
 }
+
 
 export default App;
