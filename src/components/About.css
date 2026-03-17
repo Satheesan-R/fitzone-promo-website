@@ -13,6 +13,11 @@
   padding: 0 5%;
 }
 
+.about .container {
+  max-width: 1400px;
+  padding: 0 5%;
+}
+
 /* ===== GRID ===== */
 .about-grid {
   display: grid;
@@ -24,7 +29,6 @@
 /* ===== LEFT IMAGE ===== */
 .about-img-wrap {
   position: relative;
-  margin-left: -240px;
 }
 
 .about-img {
@@ -142,6 +146,12 @@
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
+  .about .container {
+    max-width: none;
+    width: calc(100% - 32px);
+    padding: 0;
+  }
+
   .about-grid {
     grid-template-columns: 1fr;
     gap: 48px;
@@ -153,10 +163,6 @@
 
   .about-badge {
     right: 0;
-  }
-
-  .about-img-wrap {
-    margin-left: 0;
   }
 
   .about-img {

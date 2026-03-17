@@ -6,6 +6,7 @@ import Services from "./components/Services";
 import Trainers from "./components/Trainers";
 import Membership from "./components/Membership";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 
 
@@ -28,6 +29,7 @@ function App() {
       <Trainers darkMode={darkMode} />
       <Membership darkMode={darkMode} />
       <Contact darkMode={darkMode} />
+      <Footer darkMode={darkMode} />
 
     </div>
   );
