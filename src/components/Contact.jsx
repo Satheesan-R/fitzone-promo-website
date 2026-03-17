@@ -1,5 +1,10 @@
 import { useState, useEffect, useRef } from "react";
 import "./Contact.css";
+import logo from "../assets/Gym Map.png";
+
+const MAP_POINTS = [
+  { name: "Fitness Sports Center", top: "42%", left: "54%", featured: true },
+];
 
 const Contact = ({ darkMode }) => {
   const mode = darkMode ? "dark" : "light";
@@ -194,8 +199,23 @@ const Contact = ({ darkMode }) => {
 
             {/* MAP */}
             <div className={`map-placeholder ${mode}`}>
-              <div className="map-pin">📍</div>
-              <p>Colombo, Sri Lanka</p>
+              <img
+                src={logo}
+                alt="Fitness Sports Center location map"
+                className="map-image"
+              />
+              <div className="map-points">
+                {MAP_POINTS.map((point) => (
+                  <div
+                    key={point.name}
+                    className={`map-point ${point.featured ? "featured" : ""}`}
+                    style={{ top: point.top, left: point.left }}
+                  >
+                    <span className="map-dot" aria-hidden="true" />
+                    <span className="map-label">{point.name}</span>
+                  </div>
+                ))}
+              </div>
             </div>
 
             {/* CONTACT DETAILS */}
@@ -210,8 +230,8 @@ const Contact = ({ darkMode }) => {
               <div>
                 <p className="detail-label">CONTACT INFO</p>
                 <p className="detail-text">
-                  +94 11 234 5678<br />
-                  info@fitnesssports.lk
+                  0769400150<br />
+               john@fitnesssportscenter.com
                 </p>
               </div>
             </div>
