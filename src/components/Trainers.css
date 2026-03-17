@@ -1,0 +1,97 @@
+/* ===== TRAINERS ===== */
+.trainers {
+  padding: 100px 0;
+  transition: background 0.3s;
+}
+
+.trainers.dark { background: #0d0d0d; }
+.trainers.light { background: #f0f0f0; }
+
+/* ===== SECTION CENTER ===== */
+.section-center {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+/* ===== TRAINERS GRID ===== */
+.trainers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* ===== TRAINER CARD ===== */
+.trainer-card {
+  text-align: center;
+  cursor: pointer;
+}
+
+/* IMAGE */
+.trainer-img-wrap {
+  overflow: hidden;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.trainer-img-wrap img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+  margin: 0 auto;
+  filter: grayscale(30%);
+  transition: filter 0.3s, transform 0.4s;
+}
+
+.trainer-card:hover .trainer-img-wrap img {
+  filter: grayscale(0%);
+  transform: scale(1.04);
+}
+
+/* GOLD OVERLAY ON HOVER */
+.trainer-img-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(201, 149, 12, 0.15);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.trainer-card:hover .trainer-img-wrap::after {
+  opacity: 1;
+}
+
+/* NAME */
+.trainer-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  color: #C9950C;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+/* ROLE */
+.trainer-role {
+  font-size: 11px;
+  color: #888888;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .trainers-grid {
+    grid-template-columns: 1fr;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .trainers-grid {
+    grid-template-columns: 1fr;
+  }
+}
