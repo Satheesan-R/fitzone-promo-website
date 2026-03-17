@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Services from "./components/Services";
 import Trainers from "./components/Trainers";
+import Membership from "./components/Membership";
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
       <About darkMode={darkMode} />
       <Services darkMode={darkMode} />
       <Trainers darkMode={darkMode} />
+      <Membership darkMode={darkMode} />
     </div>
   );
 }
