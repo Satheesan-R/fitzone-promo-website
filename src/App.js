@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Services from "./components/Services";
+import Trainers from "./components/Trainers";
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       <Hero darkMode={darkMode} />
       <About darkMode={darkMode} />
       <Services darkMode={darkMode} />
+      <Trainers darkMode={darkMode} />
     </div>
   );
 }
