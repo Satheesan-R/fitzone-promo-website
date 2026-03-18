@@ -18,7 +18,6 @@ const Footer = ({ darkMode }) => {
       <div className="container">
         <div className="footer-grid">
 
-          {/* BRAND */}
           <div>
             <div className="footer-brand-name">
               FITNESS <span>SPORTS CENTER</span>
@@ -34,7 +33,6 @@ const Footer = ({ darkMode }) => {
             </div>
           </div>
 
-          {/* QUICK LINKS */}
           <div className="footer-col">
             <p className="footer-heading">Quick Links</p>
             <a href="#home">Home Page</a>
@@ -43,7 +41,6 @@ const Footer = ({ darkMode }) => {
             <a href="#trainers">Expert Trainers</a>
           </div>
 
-          {/* MEMBERSHIP LINKS */}
           <div className="footer-col">
             <p className="footer-heading">Membership</p>
             <a href="#membership">Basic Membership</a>
@@ -52,7 +49,6 @@ const Footer = ({ darkMode }) => {
             <a href="#membership">Corporate Plans</a>
           </div>
 
-          {/* NEWSLETTER */}
           <div>
             <p className="footer-heading">Newsletter</p>
             <p className="newsletter-desc">
@@ -76,7 +72,6 @@ const Footer = ({ darkMode }) => {
 
         </div>
 
-        {/* FOOTER BOTTOM */}
         <div className="footer-bottom">
           <p>© 2024 FITNESS SPORTS CENTER. ALL RIGHTS RESERVED.</p>
           <div className="footer-bottom-links">
