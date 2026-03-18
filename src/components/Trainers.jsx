@@ -64,7 +64,7 @@ const Trainers = ({ darkMode }) => {
     <section className={`trainers ${mode}`} id="trainers">
       <div className="container">
 
-        {/* HEADING */}
+        
         <div className="section-center reveal" ref={addRef}>
           <span className="section-label">OUR EXPERTS</span>
           <h2 className="section-title" style={{
@@ -74,7 +74,7 @@ const Trainers = ({ darkMode }) => {
           </h2>
         </div>
 
-        {/* TRAINERS GRID */}
+        
         <div className="trainers-grid">
           {TRAINERS.map((trainer) => (
             <div
@@ -82,7 +82,7 @@ const Trainers = ({ darkMode }) => {
               className="trainer-card reveal"
               ref={addRef}
             >
-              {/* IMAGE */}
+              
               <div className="trainer-img-wrap">
                 <img
                   src={trainer.img}
@@ -94,10 +94,10 @@ const Trainers = ({ darkMode }) => {
                 />
               </div>
 
-              {/* NAME */}
+              
               <h3 className="trainer-name">{trainer.name}</h3>
 
-              {/* ROLE */}
+              
               <p className="trainer-role">{trainer.role}</p>
 
             </div>

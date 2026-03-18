@@ -10,16 +10,14 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
 
   return (
     <>
-      {/* NAVBAR */}
       <nav className={`navbar ${mode}`}>
 
-        {/* LOGO */}
         <div className="nav-brand">
           <img src={logo} alt="logo" className="nav-logo-img" />
           FITNESS <span>SPORTS CENTER</span>
         </div>
 
-        {/* NAV LINKS */}
+      
         <ul className="nav-links">
           {["Home", "About", "Services", "Trainers", "Membership", "Contact"].map((item) => (
             <li key={item}>
@@ -28,12 +26,10 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
           ))}
         </ul>
 
-        {/* RIGHT BUTTONS */}
         <div className="nav-right">
          
           <button className="btn-join">JOIN NOW</button>
 
-          {/* HAMBURGER */}
           <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
             <span></span>
             <span></span>
@@ -43,7 +39,6 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
 
       </nav>
 
-      {/* MOBILE MENU */}
       <div className={`mobile-menu ${mode} ${menuOpen ? "open" : ""}`}>
         {["Home", "About", "Services", "Trainers", "Membership", "Contact"].map((item) => (
           <a
