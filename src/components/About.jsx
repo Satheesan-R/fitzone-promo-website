@@ -6,7 +6,7 @@ import logo from "../assets/Gym Interior.png";
 const About = ({ darkMode }) => {
   const mode = darkMode ? "dark" : "light";
 
-  // ===== SCROLL REVEAL =====
+
   const revealRefs = useRef([]);
 
   useEffect(() => {
@@ -39,14 +39,14 @@ const About = ({ darkMode }) => {
       <div className="container">
         <div className="about-grid">
 
-          {/* LEFT — IMAGE */}
+  
           <div className="about-img-wrap reveal" ref={addRef}>
             <img
               src={logo}
               alt="Gym Interior"
               className="about-img"
             />
-            {/* GOLD BADGE */}
+
             <div className="about-badge">
               <div className="badge-num">15+</div>
               <div className="badge-text">YEARS OF EXCELLENCE</div>
@@ -69,7 +69,7 @@ const About = ({ darkMode }) => {
               equipment that empowers our members to surpass their limits.
             </p>
 
-            {/* FEATURES */}
+           
             <div className="about-features">
               {[
                 { icon: "⚙️", title: "Pro Equipment", desc: "Premier Strength & Life Fitness tech" },
