@@ -169,11 +169,12 @@ const Services = ({ darkMode }) => {
           </div>
         ) : (
           <div className="services-grid">
-            {filteredServices.map((service) => (
+            {filteredServices.map((service, index) => (
               <div
                 key={service.title}
                 className={`service-card ${mode} reveal`}
                 ref={addRef}
+                style={{ "--stagger": index }}
               >
                 {/* IMAGE */}
                 <div className="card-img-wrap">
