@@ -4,9 +4,9 @@ import "./Membership.css";
 const PLANS = [
   {
     name: "BASIC",
-    price: 49,
+    price: "Rs. 3,500",
     features: [
-      "Standard Gym Access",
+      "Gym Access (6am – 9pm)",
       "Locker Room & Showers",
       "Free Wifi",
     ],
@@ -15,11 +15,11 @@ const PLANS = [
   },
   {
     name: "PRO",
-    price: 89,
+    price: "Rs. 5,500",
     features: [
-      "24/7 Premium Access",
+      "24/7 Gym Access",
       "All Group Classes",
-      "Sauna & Steam Access",
+      "Steam Room Access",
       "2 Guest Passes/Month",
     ],
     highlight: true,
@@ -28,12 +28,12 @@ const PLANS = [
   },
   {
     name: "ELITE",
-    price: 149,
+    price: "Rs. 9,500",
     features: [
       "Unlimited Access",
-      "4 Personal Training/Mo",
+      "Personal Training Sessions",
       "Nutrition Counseling",
-      "Laundry Service",
+      "VIP Lounge Access",
     ],
     highlight: false,
     btnLabel: "JOIN ELITE",
@@ -103,7 +103,7 @@ const Membership = ({ darkMode }) => {
 
               {/* PRICE */}
               <div className="plan-price">
-                <span className="price-num">${plan.price}</span>
+                <span className="price-num">{plan.price}</span>
                 <span className="price-mo">/month</span>
               </div>
 
