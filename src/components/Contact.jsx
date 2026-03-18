@@ -83,6 +83,7 @@ const Contact = ({ darkMode }) => {
     } else {
       setErrors({});
       setSubmitted(true);
+      setFormData({ name: "", email: "", message: "" });
     }
   };
 
@@ -97,15 +98,26 @@ const Contact = ({ darkMode }) => {
     }
   };
 
-  // ===== RESET FORM =====
-  const resetForm = () => {
-    setFormData({ name: "", email: "", message: "" });
-    setErrors({});
-    setSubmitted(false);
-  };
-
   return (
     <section className={`contact ${mode}`} id="contact">
+      {submitted && (
+        <div className="form-toast-overlay">
+          <div className={`form-toast ${mode}`} role="dialog" aria-modal="true" aria-live="polite">
+            <div className="form-toast-icon" aria-hidden="true">✓</div>
+            <div className="form-toast-text">
+              <strong>Message Sent Successfully</strong>
+              <span>Your details are received. Our team will contact you within 24 hours.</span>
+            </div>
+            <button
+              type="button"
+              className="form-toast-ok"
+              onClick={() => setSubmitted(false)}
+            >
+              OK
+            </button>
+          </div>
+        </div>
+      )}
       <div className="container">
 
         {/* HEADING */}
@@ -123,25 +135,10 @@ const Contact = ({ darkMode }) => {
           {/* LEFT — FORM */}
           <div className="reveal" ref={addRef}>
 
-            {/* SUCCESS MESSAGE */}
-            {submitted ? (
-              <div className="success-msg">
-                <div className="success-icon">✅</div>
-                <h3>Message Sent!</h3>
-                <p>We'll get back to you within 24 hours.</p>
-                <button className="btn-submit" onClick={resetForm}>
-                  SEND ANOTHER
-                </button>
-              </div>
-            ) : (
+            <form onSubmit={handleSubmit} noValidate>
 
-              /* FORM */
-              <form onSubmit={handleSubmit} noValidate>
-
-                {/* NAME + EMAIL ROW */}
                 <div className="form-row">
 
-                  {/* NAME */}
                   <div className="form-group">
                     <label>Full Name</label>
                     <input
@@ -155,7 +152,6 @@ const Contact = ({ darkMode }) => {
                     <span className="form-error">{errors.name}</span>
                   </div>
 
-                  {/* EMAIL */}
                   <div className="form-group">
                     <label>Email Address</label>
                     <input
@@ -171,7 +167,6 @@ const Contact = ({ darkMode }) => {
 
                 </div>
 
-                {/* MESSAGE */}
                 <div className="form-group">
                   <label>Your Message</label>
                   <textarea
@@ -185,19 +180,15 @@ const Contact = ({ darkMode }) => {
                   <span className="form-error">{errors.message}</span>
                 </div>
 
-                {/* SUBMIT */}
-                <button type="submit" className="btn-submit">
-                  SEND MESSAGE
-                </button>
+              <button type="submit" className="btn-submit">
+                SEND MESSAGE
+              </button>
 
-              </form>
-            )}
+            </form>
           </div>
 
-          {/* RIGHT — MAP + INFO */}
           <div className="reveal" ref={addRef}>
 
-            {/* MAP */}
             <div className={`map-placeholder ${mode}`}>
               <img
                 src={logo}
@@ -218,7 +209,7 @@ const Contact = ({ darkMode }) => {
               </div>
             </div>
 
-            {/* CONTACT DETAILS */}
+          
             <div className="contact-details">
               <div>
                 <p className="detail-label">VISIT US</p>
