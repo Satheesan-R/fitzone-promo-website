@@ -7,7 +7,6 @@
 .services.dark { background: #090909; }
 .services.light { background: #ffffff; }
 
-/* ===== REVEAL ANIMATION ===== */
 .reveal {
   opacity: 0;
   transform: translateY(30px) scale(0.985);
@@ -28,7 +27,6 @@
 .services-header.reveal { transition-delay: 0.05s; }
 .filter-tabs.reveal { transition-delay: 0.14s; }
 
-/* ===== HEADER ===== */
 .services-header {
   display: flex;
   justify-content: space-between;
@@ -38,7 +36,6 @@
   gap: 20px;
 }
 
-/* ===== SEARCH ===== */
 .search-wrap {
   position: relative;
 }
@@ -75,7 +72,6 @@
 .search-input:focus { border-color: #C9950C; }
 .search-input::placeholder { color: #555555; }
 
-/* ===== FILTER TABS ===== */
 .filter-tabs {
   display: flex;
   gap: 10px;
@@ -109,14 +105,12 @@
   color: #C9950C;
 }
 
-/* ===== SERVICES GRID ===== */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
 
-/* ===== SERVICE CARD ===== */
 .service-card {
   position: relative;
   overflow: hidden;
@@ -163,7 +157,6 @@
   transform: translateX(65%) rotate(8deg);
 }
 
-/* CARD IMAGE */
 .card-img-wrap {
   position: relative;
   overflow: hidden;
@@ -181,7 +174,6 @@
   transform: scale(1.1);
 }
 
-/* CARD TAG */
 .card-tag {
   position: absolute;
   top: 12px;
@@ -193,7 +185,6 @@
   padding: 3px 10px;
 }
 
-/* CARD BODY */
 .card-body {
   padding: 20px 18px 24px;
 }
@@ -216,7 +207,6 @@
 .service-card.dark .card-body p { color: #777777; }
 .service-card.light .card-body p { color: #555555; }
 
-/* EXPLORE BUTTON */
 .explore-btn {
   background: none;
   border: none;
@@ -237,7 +227,7 @@
   transform: translateX(4px);
 }
 
-/* NO RESULTS */
+
 .no-results {
   text-align: center;
   padding: 60px 0;
@@ -245,7 +235,7 @@
   font-size: 16px;
 }
 
-/* ===== RESPONSIVE ===== */
+
 @media (max-width: 1024px) {
   .services-grid { grid-template-columns: repeat(2, 1fr); }
 }

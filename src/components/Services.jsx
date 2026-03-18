@@ -124,7 +124,7 @@ const Services = ({ darkMode }) => {
     <section className={`services ${mode}`} id="services">
       <div className="container">
 
-        {/* HEADER */}
+      
         <div className="services-header reveal" ref={addRef}>
           <div>
             <span className="section-label">OUR SERVICES</span>
@@ -135,7 +135,7 @@ const Services = ({ darkMode }) => {
             </h2>
           </div>
 
-          {/* SEARCH */}
+     
           <div className="search-wrap">
             <span className="search-icon">🔍</span>
             <input
@@ -148,7 +148,7 @@ const Services = ({ darkMode }) => {
           </div>
         </div>
 
-        {/* FILTER TABS */}
+        
         <div className="filter-tabs reveal" ref={addRef}>
           {FILTERS.map((filter) => (
             <button
@@ -162,7 +162,7 @@ const Services = ({ darkMode }) => {
           ))}
         </div>
 
-        {/* SERVICES GRID */}
+       
         {filteredServices.length === 0 ? (
           <div className="no-results">
             No services found for "{searchQuery}" 😕
@@ -176,7 +176,7 @@ const Services = ({ darkMode }) => {
                 ref={addRef}
                 style={{ "--stagger": index }}
               >
-                {/* IMAGE */}
+              
                 <div className="card-img-wrap">
                   <img src={service.img} alt={service.title} />
                   <span
@@ -187,7 +187,6 @@ const Services = ({ darkMode }) => {
                   </span>
                 </div>
 
-                {/* BODY */}
                 <div className="card-body">
                   <h3>{service.title}</h3>
                   <p>{service.desc}</p>

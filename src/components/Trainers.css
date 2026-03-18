@@ -1,4 +1,3 @@
-/* ===== TRAINERS ===== */
 .trainers {
   padding: 100px 0;
   transition: background 0.3s;
@@ -7,26 +6,22 @@
 .trainers.dark { background: #0d0d0d; }
 .trainers.light { background: #f0f0f0; }
 
-/* ===== SECTION CENTER ===== */
 .section-center {
   text-align: center;
   margin-bottom: 56px;
 }
 
-/* ===== TRAINERS GRID ===== */
 .trainers-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 28px;
 }
 
-/* ===== TRAINER CARD ===== */
 .trainer-card {
   text-align: center;
   cursor: pointer;
 }
 
-/* IMAGE */
 .trainer-img-wrap {
   overflow: hidden;
   margin-bottom: 16px;
@@ -49,7 +44,6 @@
   transform: scale(1.04);
 }
 
-/* GOLD OVERLAY ON HOVER */
 .trainer-img-wrap::after {
   content: '';
   position: absolute;
@@ -63,7 +57,6 @@
   opacity: 1;
 }
 
-/* NAME */
 .trainer-name {
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 22px;
@@ -73,7 +66,6 @@
   margin-bottom: 4px;
 }
 
-/* ROLE */
 .trainer-role {
   font-size: 11px;
   color: #888888;
@@ -81,7 +73,6 @@
   text-transform: uppercase;
 }
 
-/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   .trainers-grid {
     grid-template-columns: 1fr;
