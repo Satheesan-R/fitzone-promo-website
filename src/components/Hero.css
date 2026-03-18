@@ -15,6 +15,8 @@
   background-size: cover;
   background-position: center;
   filter: brightness(0.8);
+  transform: scale(1.1);
+  animation: heroZoom 1.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 /* DARK OVERLAY */
@@ -47,8 +49,9 @@
 
   /* animation */
   opacity: 0;
-  animation: fadeUp 0.8s ease forwards;
-  animation-delay: 0.1s;
+  transform: translateY(28px);
+  animation: revealUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: 0.15s;
 }
 
 /* BIG TITLE */
@@ -64,8 +67,9 @@
 
   /* animation */
   opacity: 0;
-  animation: fadeUp 0.8s ease forwards;
-  animation-delay: 0.2s;
+  transform: translateY(28px);
+  animation: revealUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: 0.3s;
 }
 
 .hero-title .gold { color: #C9950C; }
@@ -80,8 +84,9 @@
 
   /* animation */
   opacity: 0;
-  animation: fadeUp 0.8s ease forwards;
-  animation-delay: 0.4s;
+  transform: translateY(28px);
+  animation: revealUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: 0.45s;
 }
 
 /* BUTTONS */
@@ -92,7 +97,8 @@
 
   /* animation */
   opacity: 0;
-  animation: fadeUp 0.8s ease forwards;
+  transform: translateY(28px);
+  animation: revealUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   animation-delay: 0.6s;
 }
 
@@ -135,10 +141,21 @@
 }
 
 /* ===== ANIMATION ===== */
-@keyframes fadeUp {
+@keyframes heroZoom {
+  from {
+    transform: scale(1.1);
+    filter: brightness(0.65);
+  }
+  to {
+    transform: scale(1);
+    filter: brightness(0.8);
+  }
+}
+
+@keyframes revealUp {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(28px);
   }
   to {
     opacity: 1;
