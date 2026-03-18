@@ -7,6 +7,40 @@
 .membership.dark { background: #090909; }
 .membership.light { background: #ffffff; }
 
+/* ===== REVEAL ANIMATION ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px) scale(0.99);
+  filter: blur(2px);
+  transition:
+    opacity 0.78s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.78s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.78s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform, filter;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
+
+.section-center.reveal {
+  transition-delay: 0.05s;
+}
+
+.plans-grid .plan-card.reveal:nth-child(1) {
+  transition-delay: 0.12s;
+}
+
+.plans-grid .plan-card.reveal:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.plans-grid .plan-card.reveal:nth-child(3) {
+  transition-delay: 0.28s;
+}
+
 /* ===== PLANS GRID ===== */
 .plans-grid {
   display: grid;
@@ -20,20 +54,25 @@
   border: 1px solid #2E2E2E;
   padding: 40px 28px;
   position: relative;
-  transition: border-color 0.3s, transform 0.3s;
+  transition:
+    border-color 0.34s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.34s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.34s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .plan-card.dark { background: #111111; }
 .plan-card.light { background: #f9f9f9; }
 
 .plan-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-8px);
   border-color: #555555;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.24);
 }
 
 /* HIGHLIGHTED CARD */
 .plan-card.highlight {
   border-color: #C9950C;
+  margin-top: -18px;
 }
 
 .plan-card.highlight.dark { background: #141209; }
@@ -41,6 +80,7 @@
 
 .plan-card.highlight:hover {
   border-color: #e0a80e;
+  box-shadow: 0 16px 34px rgba(201, 149, 12, 0.2);
 }
 
 /* MOST POPULAR BADGE */
@@ -79,7 +119,7 @@
 
 .price-num {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 50px;
+  font-size: 42px;
   font-weight: 900;
 }
 
@@ -168,5 +208,36 @@
     grid-template-columns: 1fr;
     max-width: 400px;
     margin: 56px auto 0;
+  }
+
+  .plan-card.highlight {
+    margin-top: 0;
+  }
+
+  .plans-grid .plan-card.reveal:nth-child(1) {
+    transition-delay: 0.08s;
+  }
+
+  .plans-grid .plan-card.reveal:nth-child(2) {
+    transition-delay: 0.14s;
+  }
+
+  .plans-grid .plan-card.reveal:nth-child(3) {
+    transition-delay: 0.2s;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .plan-card,
+  .plan-btn {
+    transition: none !important;
+    animation: none !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    filter: none;
   }
 }
