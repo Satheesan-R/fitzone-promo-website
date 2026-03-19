@@ -28,7 +28,7 @@ const Footer = ({ darkMode }) => {
             </p>
             <div className="social-links">
               {["FB", "TW", "IG", "YT"].map((s) => (
-                <a key={s} href="#" className="social-btn">{s}</a>
+                <a key={s} href="/" className="social-btn">{s}</a>
               ))}
             </div>
           </div>
@@ -75,8 +75,8 @@ const Footer = ({ darkMode }) => {
         <div className="footer-bottom">
           <p>© 2026 FITNESS SPORTS CENTER. ALL RIGHTS RESERVED.</p>
           <div className="footer-bottom-links">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
+            <a href="/">Privacy Policy</a>
+            <a href="/">Terms of Service</a>
           </div>
         </div>
 
