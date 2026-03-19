@@ -110,3 +110,5 @@ The optimized output is generated in the `build/` directory.
 ## Deployment
 This project is deployed on Netlify.
 Every push to the main branch automatically updates the live site.
+## Live Link
+🌐 https://flexfit-wellness.netlify.app
