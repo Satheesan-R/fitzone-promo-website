@@ -108,5 +108,5 @@ npm run build
 The optimized output is generated in the `build/` directory.
 
 ## Deployment
-This project is deployed on Vercel.
+This project is deployed on Netlify.
 Every push to the main branch automatically updates the live site.
