@@ -110,5 +110,16 @@ The optimized output is generated in the `build/` directory.
 ## Deployment
 This project is deployed on Netlify.
 Every push to the main branch automatically updates the live site.
+
+## Policy Page URLs
+
+After deploying to your domain, these links are available:
+
+- https://satheeswork.com/terms-conditions
+- https://satheeswork.com/privacy-policy
+- https://satheeswork.com/refund-policy
+
+For Apache/cPanel hosting, `public/.htaccess` is included so these direct URLs route correctly to the React app.
+
 ## Live Link
-🌐 https://flexfit-wellness.netlify.app
+🌐 https://fitzone-promo-website.vercel.app/
