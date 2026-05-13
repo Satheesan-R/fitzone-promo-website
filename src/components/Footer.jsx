@@ -75,8 +75,9 @@ const Footer = ({ darkMode }) => {
         <div className="footer-bottom">
           <p>© 2026 FITNESS SPORTS CENTER. ALL RIGHTS RESERVED.</p>
           <div className="footer-bottom-links">
-            <a href="/">Privacy Policy</a>
-            <a href="/">Terms of Service</a>
+            <a href="/privacy-policy">Privacy Policy</a>
+            <a href="/terms-conditions">Terms & Conditions</a>
+            <a href="/refund-policy">Refund Policy</a>
           </div>
         </div>
 
